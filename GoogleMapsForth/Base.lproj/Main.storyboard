@@ -33,7 +33,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="q1L-SQ-8zz"/>
+                    <navigationItem key="navigationItem" id="q1L-SQ-8zz">
+                        <barButtonItem key="rightBarButtonItem" title="Send location" id="q02-E9-xPh">
+                            <connections>
+                                <action selector="sendLocationButtonTapped:" destination="BYZ-38-t0r" id="XWO-J7-m9C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="ab6-TW-gp2" id="7xu-a1-8nF"/>
                     </connections>

@@ -48,12 +48,37 @@ class ViewController: UIViewController {
         self.view = mapView
         
         
+        
+        
        
         
     }
     
-    
+    var location: CLLocation?
    
+    @IBAction func sendLocationButtonTapped(_ sender: Any) {
+        
+        if let location = location {
+            
+            var request = URLRequest(url:URL(string:"SOMEURL")!)
+            request.httpMethod = "POST"
+            
+            let params = ["latitude":String(format: "%.8f", location.coordinate.latitude), "longitude":String(format: "%.8f", location.coordinate.longitude)]
+            request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            let task=URLSession.shared.dataTask(with: request) { (data:Data?, response:URLResponse?, error:Error?) in
+                if let safeData = data{
+                    print("response: \(String(describing: String(data:safeData, encoding:.utf8)))")
+                }
+            }
+            task.resume()
+            print("latitude: \(String(describing: location.coordinate.latitude)), longitude: \(String(describing: location.coordinate.longitude))")
+            }
+            
+        
+    
+    }
     
     
     
@@ -92,6 +117,8 @@ extension ViewController: CLLocationManagerDelegate {
         // Create marker and set location
         marker.position = CLLocationCoordinate2DMake(newLocation!.coordinate.latitude, newLocation!.coordinate.longitude)
         marker.map = self.mapView
+        
+        print("latitude: \(String(describing: newLocation!.coordinate.latitude)), longitude: \(String(describing: newLocation!.coordinate.longitude))")
         
         /*if let location = locations.first {
             
