@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136BDF55C6921F1EEB29677F /* Pods_GoogleMapsForth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B2B4B22F0866551A8E1DA74 /* Pods_GoogleMapsForth.framework */; };
 		843FA0931FA3844900A0FE67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA0921FA3844900A0FE67 /* AppDelegate.swift */; };
 		843FA0951FA3844900A0FE67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FA0941FA3844900A0FE67 /* ViewController.swift */; };
 		843FA0981FA3844900A0FE67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FA0961FA3844900A0FE67 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		843FA0991FA3844900A0FE67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843FA09C1FA3844900A0FE67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843FA09E1FA3844900A0FE67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B2B4B22F0866551A8E1DA74 /* Pods_GoogleMapsForth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapsForth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4928E385E25EEF53A4C4C1F /* Pods-GoogleMapsForth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsForth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsForth/Pods-GoogleMapsForth.debug.xcconfig"; sourceTree = "<group>"; };
+		D6032F593458AD0E6FF0FC4A /* Pods-GoogleMapsForth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapsForth.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleMapsForth/Pods-GoogleMapsForth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				136BDF55C6921F1EEB29677F /* Pods_GoogleMapsForth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A13DE526A937C893DCB8E76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B4B22F0866551A8E1DA74 /* Pods_GoogleMapsForth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		843FA0861FA3844900A0FE67 = {
 			isa = PBXGroup;
 			children = (
 				843FA0911FA3844900A0FE67 /* GoogleMapsForth */,
 				843FA0901FA3844900A0FE67 /* Products */,
+				CF7C16CB8BE9B159ED501C7B /* Pods */,
+				5A13DE526A937C893DCB8E76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = GoogleMapsForth;
 			sourceTree = "<group>";
 		};
+		CF7C16CB8BE9B159ED501C7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4928E385E25EEF53A4C4C1F /* Pods-GoogleMapsForth.debug.xcconfig */,
+				D6032F593458AD0E6FF0FC4A /* Pods-GoogleMapsForth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 843FA0A11FA3844900A0FE67 /* Build configuration list for PBXNativeTarget "GoogleMapsForth" */;
 			buildPhases = (
+				DAF32EE2D2FFF6854CDC70AD /* [CP] Check Pods Manifest.lock */,
 				843FA08B1FA3844900A0FE67 /* Sources */,
 				843FA08C1FA3844900A0FE67 /* Frameworks */,
 				843FA08D1FA3844900A0FE67 /* Resources */,
+				9E1591DD1CA916C514263B4D /* [CP] Embed Pods Frameworks */,
+				D44A10D82BAE5C2E3DB202AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E1591DD1CA916C514263B4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMapsForth/Pods-GoogleMapsForth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D44A10D82BAE5C2E3DB202AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleMapsForth/Pods-GoogleMapsForth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF32EE2D2FFF6854CDC70AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		843FA08B1FA3844900A0FE67 /* Sources */ = {
@@ -272,10 +347,12 @@
 		};
 		843FA0A21FA3844900A0FE67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4928E385E25EEF53A4C4C1F /* Pods-GoogleMapsForth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleMapsForth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NS.GoogleMapsForth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,10 +363,12 @@
 		};
 		843FA0A31FA3844900A0FE67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6032F593458AD0E6FF0FC4A /* Pods-GoogleMapsForth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GoogleMapsForth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NS.GoogleMapsForth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
