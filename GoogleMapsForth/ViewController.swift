@@ -50,8 +50,6 @@ class ViewController: UIViewController {
         
         
         
-       
-        
     }
     
     var location: CLLocation?
@@ -73,10 +71,9 @@ class ViewController: UIViewController {
                 }
             }
             task.resume()
-            print("latitude: \(String(describing: location.coordinate.latitude)), longitude: \(String(describing: location.coordinate.longitude))")
-            }
+        }
             
-        
+        print("Sent")
     
     }
     
